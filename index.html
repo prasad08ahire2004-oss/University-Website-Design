@@ -11,27 +11,33 @@
     <section class="header">
 
         <nav>
-
             <a href="index.html">
-
-                <img src="images/logo.png" alt="">
-
-                <div class="nav-links">
-
-                    <ul>
-
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">COURSE</a></li>
-                        <li><a href="#">BLOG</a></li>
-                        <li><a href="#">CONTACT</a></li>
-
-                    </ul>
-
-                </div>
-
+                <img src="images/logo.png" alt="University Logo">
             </a>
 
+            <div class="nav-links" id="navLinks">
+
+                <!-- Back / Close Button -->
+                <button class="back-btn" onclick="hideMenu()" aria-label="Close menu">
+                    &times;
+                </button>
+
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">COURSE</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="menu-btn" onclick="showMenu()" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
 
         <div class="text-box">
@@ -48,6 +54,20 @@
 
 
 
+    <script>
+        const navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-250px";
+        }
+    </script>
+    
+</body>
+</html>
     
 </body>
 </html>

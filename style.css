@@ -100,10 +100,101 @@ nav img {
     transition: 1s;
 }
 
+/* Remove default button styling */
+.menu-btn,
+.back-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+
+/* Hamburger icon */
+.menu-btn {
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-btn span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+}
+
+/* Back / close button */
+.back-btn {
+    color: white;
+    font-size: 35px;
+    line-height: 1;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+
 /* This code is applicable for devices who have width less than 700px or equall to 700px */
-@media(max-width: 700px) {
+@media (max-width: 700px) {
+
     .text-box h1 {
-        font-size: 20px;
+        font-size: 25px;
     }
 
+    .text-box p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    nav {
+        padding: 20px 6%;
+    }
+
+    nav img {
+        width: 120px;
+    }
+
+    /* Mobile navigation panel */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #f44336;
+        text-align: left;
+        z-index: 10;
+        transition: right 0.4s ease;
+        padding-top: 70px;
+    }
+
+    /* Navigation list */
+    .nav-links ul {
+        padding: 0;
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 15px 25px;
+    }
+
+    .nav-links ul li a {
+        font-size: 14px;
+    }
+
+    /* Show hamburger */
+    .menu-btn {
+        display: flex;
+    }
+
+    /* Show close button */
+    .back-btn {
+        display: block;
+    }
+
+    /* Disable desktop hover underline on mobile */
+    .nav-links ul li::after {
+        display: none;
+    }
 }
+
